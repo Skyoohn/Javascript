@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js/Hello.js">
+        // window.alert("Hello world!");   //실무에서 ''를 많이 쓴다, ; 넣어도 되고 안넣어도 됨, 앞에 window 가 생략된 것
+        
+    </script>
+    <script>
+    var input = prompt("출력창입니다.","문장을 입력하세요");
+    document.write(input);
+    console.log(input);
+    var str = "가나다라마바사";
+    console.log("str : "+str);
+    var num = 123;
+    console.log("num : "+num);
+    var boo = true;
+    console.log("boo : "+boo);
+    console.log("메롱");
+    document.write("<h1>메롱</h1>")   //줄어서 dom 객체
+    document.write("아이엠어프로그래머")   //줄어서 dom 객체
+    </script> -->
+    <script>
+        // var num = true;
+        // document.write(num);
+        // var varStr = 'abcdef';
+        // console.log("varStr: "+varStr);
+        // var varNum = 12.7;
+        // console.log("varnum: "+varNum);
+        // var varboo = false;
+        // console.log("varBoo: "+varboo);
+        // var varFun = function fun(){};
+        // console.log("varFun: "+varFun);
+        // var varObj = {};
+        // console.log("varobj: "+varObj);
+        // var varUnd = undefined;
+        // console.log("varunder: "+varUnd);
+        // /*
+        // undefined : 선언만 하고 초기화(할당)하지 않은 변수
+        // */
+        // var varUndfined;
+        // console.log("varUndfined : " + varUndfined);
+        
+        // varUndfined = 1;
+        // console.log("varUndfined : " + varUndfined);
+        
+        
+        // /*
+        // javascript에서는 변수에 담긴 자료형을 변경할 수 있습니다.
+        // */
+        // var varTemp;
+        // varTemp = "ABCDEF";
+        // console.log("varTemp : " + varTemp);
+        // console.log("varTemp : " + typeof(varTemp));
+        // varTemp = 123456;
+        // console.log("varTemp : " + varTemp);
+        // console.log("varTemp : " + typeof(varTemp));
+        // varTemp = true;
+        // console.log("varTemp : " + varTemp);
+        // console.log("varTemp : " + typeof(varTemp));
+        // varTemp = function() {};
+        // console.log("varTemp : " + varTemp);
+        // console.log("varTemp : " + typeof(varTemp));
+        // varTemp = {};
+        // console.log("varTemp : " + varTemp);
+        // console.log("varTemp : " + typeof(varTemp));
+        // varTemp = undefined;
+        // console.log("varTemp : " + varTemp);
+        // console.log("varTemp : " + typeof(varTemp));
+
+        // // 자료형 변환
+        // var varType = "123";
+        // console.log()
+        // console.log("varType: " + (varTrype + 1000));
+
+        // var varType = "123";
+        // console.log("varType type : "+typeof(varType));
+        // console.log("varType :" + (varType+1000));
+
+        var kor = prompt("국어 점수");
+        var eng = prompt("영어 점수");
+        var math = prompt("수학 점수");
+
+        var total = Number(kor) + Number(math) + Number(eng);
+        var avg = (total / 3.0);
+
+        document.write("총점은 "+total+"<br>")
+        document.write("평균은 "+(total/3.0)+"<br>")
+        
+        if(avg>=90){
+        document.write("수입니다."+"<br>")
+        }
+        else if(avg>=80){
+        document.write("우입니다"+"<br>")
+        }
+        else if(avg>=70){
+        document.write("미입니다"+"<br>")
+        }
+        else if(avg>=60){
+        document.write("양입니다"+"<br>")
+        }
+        else{
+        document.write("가입니다"+"<br>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
