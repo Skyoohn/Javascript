@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var varArr = new Array(0,1,2,3,4,5);
+        // document.write("varArr.length: " + varArr.length+"<br>");
+
+        // varArr = ['사과','오렌지','포도']
+
+        // for (let i = 0; i < varArr.length; i++) {
+        //     document.write(varArr[i]);    
+        // }
+        // for (let num in varArr) {
+        //     document.write(num);
+        // }
+        
+        // var varArrShiftPop = new Array("가","나","다","라","마");
+        // document.write("varArrShiftPop.shift(): " + varArrShiftPop.shift());
+        // document.write("varArrShiftPop: " + varArrShiftPop);
+        // document.write("varArrShiftPop.pop(): " + varArrShiftPop.pop());
+        // document.write("varArrShiftPop: " + varArrShiftPop)
+
+        // var lotto = []; // new Array(6);
+        // while(lotto.length < 6){
+        // // var num = parseInt(Math.random()*45)+1; 아래랑 똑같음
+        //     var num = Math.floor(Math.random()*45)+1;
+        //     if(lotto.indexOf(num)<0){ //중복제거
+        //         lotto.push(num);
+        //     }
+        // }
+        // document.write("LOTTO: " + lotto.sort());
+
+        // function add(){   // 기본적인 함수의 형태
+        //     return "합입니다.";
+        // }
+        // document.write(add());
+
+        // function add(num1, num2){   // 기본적인 함수의 형태
+        //     return num1 + num2;
+        // }
+        // document.write(add(1,2));
+
+        // //익명함수
+        // var sub = function(num1, num2){
+        //     return num1 - num2;
+        // }
+        // document.write(sub(1,2)+"<br>");
+
+        // //함수의 핵심 this와 argument
+        // function funArgs(){
+        //     for(let i = 0; i < arguments.length; i++){
+        //         document.write("내부"+arguments[i]+"<br>");
+        //     }
+        //     return arguments; // = [1,2,3,4,5,6,7]
+        // }
+
+        // var fun = funArgs(1,2,3,4,5,6,7);
+        // for(var num in fun){
+        //     document.write(fun[num] + "<br>");
+        // }
+
+        // document.write(fun + "<br>")
+        // document.write("fun" + fun.length + "<br>");
+
+        // var kor,eng,math;
+
+        // function getAvg(kor,eng,math){
+        //     return (Number(kor) + Number(eng) + Number(math)) / 3.0;
+        // }
+
+        // function getGrade(avg){
+        //     var grade = "가";
+            
+        //     if(avg >= 90){
+        //         grade = "수";
+        //     }else if(avg >= 80){
+        //         grade = "우";
+        //     }else{
+        //         grade = "가";
+        //     }          
+            
+        //     return grade;
+        // }
+
+        // kor = prompt("국어");
+        // eng = prompt("영어");
+        // math = prompt("수학");
+
+        // document.write("평균: " + getAvg(kor,eng,math) + "<br>");
+        // document.write("학점: " + getGrade(getAvg(kor,eng,math)) + "<br>");
+
+        // var arrSub = ["국어","영어","수학"];
+
+        // function getAvg(arrSubs){
+        //     var sum = 0;
+            
+        //     for (var i in arrSubs) {
+        //         sum = sum + Number(arrSubs[i]);
+        //     }
+        //     return sum / arrSubs.length;
+        // }
+
+        // function getGrade(avg){
+        //     var grade = "가";
+            
+        //     if(avg >= 90){
+        //         grade = "수";
+        //     }else if(avg >= 80){
+        //         grade = "우";
+        //     }else{
+        //         grade = "가";
+        //     }          
+            
+        //     return grade;
+        // }
+
+        // for (var i in arrSubs) {
+        //     arrSub[i] = prompt(arrSub[i])
+        // }
+
+
+        // document.write("평균" + getAvg(arrSub) + "<br>");
+        // document.write("학점" + getGrade(getAvg(arrSub)) + "<br>");
+
+        // function funName(){
+        //     return function(dan){
+        //         for(var i = 1; i < 10; i++){
+        //             document.write(i*dan+"<br>");
+        //         }
+        //     };
+        // }
+        // var reFun = funName();
+        // reFun(4);
+        // reFun(5);
+        // reFun(6);
+
+        // function funName(x){
+        //     var varName = ": : 요청한 " + x + "에 대한 구구단 : : <br>"
+
+        //     return function(dan){
+        //         document.write(varName);
+        //         for(var i = 1; i < 10; i++){
+        //             document.write(x + " * "+i+" = "+(x*i)+"<br>")
+        //         }
+        //     };
+        // }
+        // var retrunFun = funName(5);
+        // retrunFun(4);
+        
+        // function outFun(width, height){
+        //     document.write("triangle: "+ triangle()+"<br>");
+        //     document.write("quadrangle: "+ quadrangle());
+
+        //     //삼각형 면적 계산
+        //     function triangle(){
+        //         return (width * height) / 2;
+        //         }
+
+        //     //사각형 면적 계산
+        //     function quadrangle(){
+        //         return width*height;
+        //     }
+        // }
+        // outFun(3,5);
+
+        //콜백함수
+
+        function add(x,y){    // 함수가 메모리로 넘어가는것
+            return x + y;
+        }
+
+        function sub(x,y){
+            return x - y;
+        }
+        function mul(x,y){
+            return x * y;
+        }
+
+        function printResult(x,y,callback){
+            var result = callback(x,y);
+            document.write(result+"<br>");
+        }
+
+        printResult(2,3,add);
+        printResult(2,3,sub);
+        printResult(2,3,mul);
+
+        // document.write(add(10,20));
+
+
+        // array.forEach(element => {
+            
+        // });
+
+        // var varArr = new Array(100);
+        // document.write("varArr.length: " + varArr.length);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
