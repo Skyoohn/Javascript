@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // window.alert("내장함수");
+        // console.log("내장함수");
+
+        //시간관련함수
+        // var timeOut = setTimeout(function(){
+        //     alert("3초후 실행 한번 실행")
+        // },3000);
+        // var timeFun = function(){
+        //     alert("3초후 실행 한번 실행")
+        // };
+        // var timeOut = setTimeout(timeFun,3000);
+
+        // var intervaild = setInterval(function(){
+        //     document.write("2초마다 실행"+"<br>");
+        // },2000)
+        // setTimeout(function(){
+        //     document.write("2초마다 실행 실행끝"+"<br>");
+        //     clearInterval(intervaild);
+        // },10000); // 10초후에 멈춰라
+        
+        // eval
+        // var varEval = "console.log('eval함수!')";
+        // eval(varEval)  //문자열에 있는 소스코드를 바로 실행
+
+        // var objName = {};
+        // document.write(typeof objName+"<br>");
+
+        // var objCar = {
+        //     width: "3M",
+        //     height: "2m",
+        //     cc: "2000cc",
+        //     energy: 100,
+        //     speed: function(power){
+        //         return this.energy*power;     //자기자신 멤버 접근시 반드시 this
+        //     }
+        // }
+        // document.write(objCar["width"]+"<br>");
+        
+        // document.write(objCar.width+"<br>")
+        // document.write(objCar.height+"<br>")
+        // document.write(objCar.cc+"<br>")
+        // document.write(objCar.energy+"<br>")
+        // document.write(objCar.speed(100)+"<br>")
+
+        // objCar.width = "8m";
+        // document.write(objCar.width+"<br>")
+        // document.write(objCar["width"]+"<br>");
+
+        // var print = "";
+        // for (var key in objCar) {
+        //     // if(typeof objCar[key] == "function") continue;
+        //     print += key + " : " + objCar[key] + "\n"    
+        //     }
+        // console.log(print)
+
+            // /*
+            //     객체에 속성 추가 및 삭제
+            // */
+            
+            // var objName = {            
+            //     name : "Lee sun sin",
+            //     nation : "Korea",
+            //     gender  : "men",
+            //     character:"good"            
+            // };
+            
+            // var print = "";
+            // for(var key in objName) {
+            //     print += key + " : " + objName[key] + "\n"
+            // }
+            // console.log(print);
+            
+            // //속성 추가
+            // objName.talent = "fencing";
+            // print = "";
+            // for(var key in objName) {
+            //     print += key + " : " + objName[key] + "\n"
+            // }
+            // console.log(print);
+            
+            // //속성 삭제
+            // delete(objName.talent);
+            // //delete objName.talent;
+            // print = "";
+            // for(var key in objName) {
+            //     print += key + " : " + objName[key] + "\n"
+            // }
+            // console.log(print);
+
+            // console.log("nation" in objName);
+            // console.log("age" in objName);
+            
+            // with(objName){
+            //     console.log("name: "+name);
+            //     console.log("nation: "+nation);
+            //     console.log("gender: "+gender);
+            //     console.log("character: "+character);
+            // }
+
+
+            // //객체를 생성
+            // //1.object() 생성자 사용
+            
+            // var person = new Object();   // person = {}; 상태
+
+            // person.name = "홍길동";
+            // person.age = 35;
+
+            // document.write(person+"<br>");
+
+            // //2.객체 리터럴 활용 방법
+
+            // var objPerson = {
+            //     name : "홍길동",
+            //     age : 35,
+            //     getAge: function(){
+            //         return this.age;
+            //     }
+            // }
+
+            //3.생성자 함수를 만드는 방법 (붕어빵 틀 만들기) 
+            //함수에서도 기본적으로 this를 쓸수 있음 = 자바스크립트에서는 함수가 객체이기 때문에
+            //함수가 만들어질때 -> 객체로 만들기 위해서 2가지를 심어줌
+            //그 2가지는 this와 alguments
+            // function Airplane(name, color, speed){
+            //     //arguments;
+            //     //this; var Airplane(this) = {}
+            //     this.color=color;
+            //     this.name=name;
+            //     this.speed=speed;
+            //     this.fly=function(){
+            //     return this.speed+" fly!";
+            //     };
+            // }
+            // var plane1 = new Airplane("보라매","레드",100);
+            // document.write(plane1.fly());
+
+            // var arr = new Array();
+
+    //         function Grade(name,kor,eng,math){
+    //         this.name=name;
+    //         this.kor=kor;
+    //         this.eng=eng;
+    //         this.math=math;
+    //         this.getAvg=function(){
+    //             var avg = (this.kor+this.eng+this.math)/3.0;
+    //             return this.name+"의 평균은 " + avg + "입니다. <br>"
+    //         };
+    //         this.getGrade=function(){
+    //             var avg = (this.kor+this.eng+this.math)/3.0;
+    //             var result = "가";
+    //             if(avg>=90){
+    //                 result = "수";
+    //             }
+    //             else if(avg>=80){
+    //                 result = "우";
+    //             }
+    //             else if(avg>=70){
+    //                 result = "미";
+    //             }
+    //             else if(avg>=60){
+    //                 result = "양";
+    //             }
+    //             else{
+    //                 result = "가";
+    //             }
+    //             return name + "의 성적은 " + result + "입니다.";
+    //         }
+    //     }
+    // var 홍길동 = new Grade("홍길동",100,70,80);
+    // document.write(홍길동.getAvg());
+    // document.write(홍길동.getGrade());
+
+    // function Circle(radius){
+    //         this.radius=radius;
+    //         this.getArea=function(){
+    //             return "반지름 "+this.radius+" 넓이는 "+this.radius*this.radius*Math.PI;
+    //         }
+    //     }
+    //     var circle = new Circle(10);
+    // document.write(circle.getArea()); //반지름 10 넓이는 314.1516 입니다.
+            
+    // var intervaild = 1;
+    // setInterval(function() {
+    // if (intervaild <= 10) {
+    //     document.write(intervaild + "<br>");
+    //     intervaild++;
+    // } else {
+    //     clearInterval(intervaild);
+    // }
+    // }, 1000);
+    // setTimeout(function(){
+    // document.write("프로그램 완료"+"<br>");
+    // clearInterval(intervaild);
+    // },10000); // 10초후에 멈춰라
+
+    // var newWindow = window.open("http://www.google.com","openWindow","width=500,","height=500");
+    //     //위치 조정
+    //   newWindow.moveTo(50, 50);
+    //      for(var i=0; i<1000; i++) {
+    //         newWindow.moveBy(1, 1);
+    //      }
+    
+    //      //사이즈 조정
+    //      newWindow.resizeTo(500, 600);
+    //      for(var i=0; i<200; i++) {
+    //         newWindow.resizeBy(-1, -1);
+    //      }
+        
+        // console.log(window);
+        // window.onload = function(){
+        //     console.log("first!");
+        // }
+        //     /*
+        //         Screen객체
+        //     */
+            
+        //     function openWin(url, width, height) {
+            
+        //     console.log("screen.width : " + screen.width);
+        //     console.log("screen.height : " + screen.height);
+            
+        //     var left = screen.width/2 - width/2;
+        //     var top = screen.height/2 - height/2;
+        //     var opt = "width = " + width + ", height = " + height + ", left = " + left + ", top = " + top;
+            
+        //     open(url, "newWin", opt);
+        
+        // }
+        
+        // openWin("https://yahoo.com", 800, 500);
+        
+        // window.onload = function(){
+        //     //location.href = "http://www.yahoo.com" //그냥 창을 띄우기
+        //     location.assign = "http://www.yahoo.com" //히스토리를 안남김(뒤로가기 불가)
+        //     location.replace = "http://www.yahoo.com" 
+        // }
+
+        // window.onload = function(){
+        //     var tag = document.createElement("p");
+        //     var text = document.createTextNode("자바 스크립트");
+
+        //     tag.appendChild(text); //<p>자바 스크립트</p>
+        //     document.body.appendChild(tag);
+        // }
+
+        window.onload = function(){
+            var imgNode = document.createElement("img");
+            imgNode.setAttribute("src","./img/logo.png");
+            imgNode.setAttribute("width",170);
+            imgNode.setAttribute("height",67);
+            imgNode.setAttribute("tempData","logoImg");
+            document.body.appendChild(imgNode);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
