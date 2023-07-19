@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // window.onload=function(){
+        //     var str = "";
+        //     for (var i = 1; i <= 5; i++) {
+        //         str = str + "<p>안녕하세요</p>"
+        //         }
+        //     document.body.innerHTML = str
+        // }
+        
+        // window.onload = function(){  //리얼타임 표시
+        //     function setClock(){
+        //         var date = new Date();
+        //         var hour = date.getHours();
+        //         var min = date.getMinutes();
+        //         var sec = date.getSeconds();
+        //         document.body.innerHTML = hour + ":" + min +  ":" + sec;
+        //     }
+        //     setInterval(setClock,1000);
+        // }
+
+        // window.onload = function() {
+			
+        //     var str = "";
+        //     str += "<p id='jsTitle'> javascript & node.js </p>";
+        //     str += "<img id='logoImg', src='./img/logo.png',";
+        //     str += "width='170', height='67', tempData='logoImg'>";
+            
+        //     document.body.innerHTML = str;
+            
+            
+        //     var titleNode = document.getElementById("jsTitle");
+        //     titleNode.innerHTML = "JS & node";
+            
+        //     var logoNode = document.getElementById("logoImg");
+        //     logoNode.setAttribute("src", "./img/arm_mbed.png");
+        //     logoNode.setAttribute("width", 297);
+        //     logoNode.setAttribute("height", 124);}
+
+        // window.onload = function() {
+			
+        //     var str = "";
+        //     str += "<p id='jsTitle'> javascript & node.js </p>";
+        //     str += "<img id='logoImg', src='./img/logo.png'>";
+            
+        //     document.body.innerHTML = str;
+            
+            
+        //     var titleNode = document.getElementById("jsTitle");
+        //     titleNode.style.fontSize = "1.2em";
+        //     titleNode.style.border = "1px solid #ff0000";
+            
+        //     var logoNode = document.getElementById("logoImg");
+        //     logoNode.style.width = "170px";
+        //     logoNode.style.height = "67px";}
+
+
+        // window.onload = function(){
+        //     var ce = document.getElementById("cEvent")
+        //     var divCe = document.getElementById("divEvent")
+        //     // ce.onclick=function(){       
+        //     //     // document.write('꽝');
+        //     //     ce.style.backgroundColor="blue";
+        //     // }
+
+        //     // ce.addEventListener("click",ce.onclick=function(){
+        //     //     ce.style.backgroundColor="blue";
+        //     // })
+
+        //     // var changeBlue = function(){
+        //     //     console.log(this);
+        //     //     this.style.backgroundColor="blue";
+        //     // }
+        //     var changeBlue = function(event){
+        //         console.log(event);
+        //         this.style.backgroundColor="blue";
+        //         for (var key in event) {
+        //                 console.log(key + " " + event[key]);
+                        
+        //             }
+        //         }
+            
+        //     var changeRed = function(event){
+        //         console.log(event);
+        //         this.style.backgroundColor="red";
+        //     }
+        //     ce.addEventListener("click",changeBlue)
+        //     ce.addEventListener("dblclick",changeRed)
+
+        //     divCe.addEventListener("click",changeBlue)
+        //     divCe.addEventListener("dblclick",changeRed)
+        
+        // }
+        // //     ce.ondblclick=function(){
+        // //         ce.style.backgroundColor="red";
+        // //     }
+        // // }
+
+        //     // function headerClick(){
+        //     //     document.write('꽝');
+        //     // }
+
+        // window.onload = function(){
+        //     var me = document.getElementById("mouseEvent");
+        //     me.addEventListener("click", function(){
+        //        console.log("click event!!");
+        //     }, false);
+            
+        //     me.addEventListener("mouseover", function(){
+        //        console.log("mouseover event!!");
+        //     }, false);
+            
+        //     me.addEventListener("mouseout", function(){
+        //        console.log("mouseout event!!");
+        //     }, false);
+            
+        //     me.addEventListener("mousemove", function(e){
+        //        console.log("mousemove event!!");
+        //        //console.log("x : " + e.clientX + ", y : " + e.clientX);
+        //     }, false);
+            
+        //     me.addEventListener("mousedown", function(e){
+        //        console.log("mousedown event!!");
+        //     }, false);
+            
+        //     me.addEventListener("mouseup", function(e){
+        //        console.log("mouseup event!!");
+        //     }, false);
+            
+        //     me.addEventListener("dblclick", function(e){
+        //        console.log("dblclick event!!");
+        //     }, false);
+        //  }
+
+        //         window.onload = function(){
+
+        // function inputHandler(event){
+        // console.log(event.key); //A
+        // console.log(event.keyCode); //
+        
+        // if(event.key != 'Enter' && event.key != 'Shift'){
+        //     document.getElementById('result').innerText = event.key.charCodeAt();
+        // }
+        // }
+
+        // var input = document.getElementById("input_char");
+        // input.addEventListener("keydown",inputHandler);
+
+        // }
+
+
+        // 
+        // window.onload = function(){
+        //     var bUp = document.getElementById("up");
+        //     bUp.addEventListener("click",plusHandler);
+        //     var bDown = document.getElementById("down");
+        //     bUp.addEventListener("click",minusHandler);
+
+        //     function plusHandler(){
+        //         var count = document.getElementById("quantity").value;
+        //         document.getElementById("quantity").value = Number(count)+1;
+        //     }
+        //     function minusHandler(){
+        //         var count = document.getElementById("quantity").value;
+        //         document.getElementById("quantity").value = parseInt(count)-1;
+        //     }
+        // }
+
+
+        // //글자수 세기
+        // window.onload=function(){
+        //     var tArea = document.getElementById("text_area");
+        //     tArea.addEventListener("keydown",areaHandler);
+            
+        //     function areaHandler(){
+        //         var text = document.getElementById("text_area").value;
+        //         document.getElementById("result").innerHTML = text.length;
+        //     }
+        // }
+
+        //  //체크박스 컨트롤
+        //     var checkLang = document.getElementById("all_check");
+        //     checkLang.addEventListener("click",checkHandler);
+
+        //     function checkHandler(){
+        //         var checks = document.getElementsByClassName("lang");
+                
+        //         for (var i = 0; i < checks.length; i++) {
+        //             checks[i].checked = document.getElementById("all_check").checked;
+        //         }
+        //     }
+
+    </script>
+        <style>
+            /* #cEvent
+            {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+            }
+            #divEvent
+            {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: green;
+            color: #fff;
+            font-weight: bolder;
+            } */
+
+            /* #mouseEvent {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+            } */
+
+        </style>
+</head>
+<body>
+    <!-- <div id="cEvent" onclick="document.write('꽝')">이벤트클릭</div> -->
+    <!-- <div id="cEvent" ondblclick="headerClick()">이벤트클릭</div> -->
+    <!-- <div id="cEvent">이벤트 클릭</div> -->
+    <!-- <div id="divEvent">DIV 이벤트 클릭</div> -->
+    <!-- <div id="mouseEvent">mouse event</div> -->
+    <!-- <input id="input_char" type="text">
+    <span id="result">65</span> -->
+
+    <!-- 증감<input type="text" id="quantity" value="1">
+    <button id="up" >+</button>
+    <button id="down" >-</button> -->
+    
+    <!-- 글자수 세기<br>
+    <textarea id="text_area" rows="10" cols="10"></textarea><br>
+    입력문자수:<span id="result">0</span> -->
+
+    <!-- 전체선택:<input type="checkbox" id="all_check" name="all" ><br>
+
+    <input type="checkbox" name="lang" class="lang">java<br>
+    <input type="checkbox" name="lang" class="lang">sql<br>
+    <input type="checkbox" name="lang" class="lang">angular<br> -->
+</body>
+</html>
