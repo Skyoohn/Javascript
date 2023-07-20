@@ -6,8 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        // window.onload=function(){
+        //     var da = document.getElementById("alert")
+        //     da.onclick=function(){
+        //         da.style.display='none';
+        //     }
+        // }
+        function openn(hole){
+            document.getElementById('alert').style.display=hole;
+            }
+        // function dad(){
+        //     document.getElementById('alert').style.display='none';
+        // }
+
+        // function plus(hole){
+        //     2 + hole;
+        // }
+        // plus(1);
+        // plus(2);
+        // plus(3);
+        function openn1(hole){
+            document.getElementById('title').innerHTML=hole;
+            document.getElementById('alert').style.display='block';
+        }
+        // function openn1(hole){
+        //     document.getElementsByClassName('alert-box')[0].innerHTML=hole;
+        //     document.getElementById('alert').style.display='block';
+        // }
+        // function openn2(){
+        //     document.getElementsByClassName('alert-box')[0].innerHTML="비번";
+        //     document.getElementById('alert').style.display='block';
+        // }
+        window.onload=function(){
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display='none';
+        });}
     </script>
 </head>
+<link rel="stylesheet" href="main.css">
 <body>
+    <div class="alert-box" id="alert">
+    <p id="title">ID</p>
+    <button id="close">닫기</button>
+    <!-- <button onclick="openn('none')">닫기</button> -->
+    </div>
+    <button onclick="openn1('아이디')">버튼1</button>
+    <button onclick="openn1('비번')">버튼2</button>
 </body>
 </html>
