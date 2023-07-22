@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+                $("#add").click(function(){
+                        let text = $("#words").val();      
+                        if(text =="")
+                            return;
+                        let list = $("<li class='plant'></li>");
+                        list.text(text+" x");
+                        $("#uList").append(list);
+                        $(".plant").on('click','.plant'),(function(){
+                            $(this).remove();
+                        })
+                    });
+                });
+
+</script>
+
+    // <script>
+    // $(document).ready(function(){
+    //         //자바스크립트 객체를 json형태로 바꾸기
+    //         var person = {
+    //             name : "홍길동",
+    //             age : 30
+    //         }
+
+            
+
+    //         // var json = JSON.stringify(person);
+    //         // document.write(json + "<br>")
+
+    //         // $.ajax({
+    //         //     type : `http method type`,
+    //         //     url : `url`,
+    //         //     data : `서버에 전송할 데이터`,
+    //         //     contentType : "전송할 데이터 타입",
+    //         //     //기본 값 : "application / x-www-form-urlencoded; charset = UTF-8"  
+    //         //     dataType : '서버로 부터 수신할 데이터 타입',
+    //         //     //아무것도 지정하지 않으면 jQuery는 응답의 MIME 유형을 기반으로 해석을 시도
+    //         //     error : `에러 발생시 수행할 함수`,
+    //         //     success : `성공시 수행할 함수`
+    //         //     });
+
+    //         $.ajax({
+    //             type : "GET",  //방식 설정
+    //             url : "https://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=30",
+    //             // 동기통신 async : false,
+    //             success : function(result){
+    //                 console.log("통신 성공");
+    //                 console.log(result);
+    //                 // document.write(result.pageno+"<br>");
+    //                 // document.write(result.contacts[0].name);
+
+    //                 $("#list-table").append(
+    //                     $("<tr></tr>")
+    //                         .append($("<td></td>").text("번호"))
+    //                         .append($("<td></td>").text("이름"))
+    //                         .append($("<td></td>").text("전화번호"))
+    //                         .append($("<td></td>").text("주소"))
+    //                         .append($("<td></td>").text("사진"))
+    //                         .append($("<td></td>").text("삭제"))     
+    //                 );
+    //                 $(result.contacts).each(function(){
+    //                 $("#list-table").append(
+    //                     $("<tr></tr>")
+    //                         .append($("<td></td>").text(this.no))
+    //                         .append($("<td></td>").text(this.name))
+    //                         .append($("<td></td>").text(this.tel))
+    //                         .append($("<td></td>").text(this.address))
+    //                         .append($("<td></td>").append($("<img></img>").attr("src",this.photo)))
+    //                         .append($("<td></td>").append($("<input></input>").attr("id",this.no).attr("type","button").attr("class","del-button").attr("value","삭제")  ))     
+    //                 );
+    //                 });
+    //             },
+    //             error : function(error){
+    //                 console.log(error);
+    //             }
+    //         });
+    //         console.log("비동기 체크 문구")
+    //     });
+    // </script>
+
+    
+
+    // $(document).on("click",".del-button",function(){
+    // console.log(this);
+    // $(this).parent().parent().remove();
+    // });
+    // </script> -->
+</head>
+<body>
+    <!-- <table id="list-table" width = "500" border = "1"></table> -->
+    
+    <input type="text" id="words">
+    <button type="button" id="add">추가</button><br>
+    <ul id="uList">
+
+        
+        <li id='plant'>가</li>
+        <li id='plant'>나</li>
+        <li id='plant'>다</li>
+        <li id='plant'>라</li>
+        </ul>
+    <br>
+</body>
+</html>
