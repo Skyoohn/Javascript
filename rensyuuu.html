@@ -25,10 +25,10 @@
                             .append($("<td></td>").text("전화번호"))
                             .append($("<td></td>").text("주소"))
                             .append($("<td></td>").text("사진"))
-                            .append($("<td></td>").text("삭제"))     
-                            .append($("<td></td>").text("삭제"))     
-                            .append($("<td></td>").text("삭제"))     
-                            .append($("<td></td>").text("삭제"))     
+                            .append($("<td></td>").text("삭제"))    
+                            .append($("<td></td>").text("삭제"))    
+                            .append($("<td></td>").text("삭제"))    
+                            .append($("<td></td>").text("삭제"))    
                     );
                     $(result.contacts).each(function(){
                     $("#list-table").append(
@@ -42,6 +42,7 @@
                             .append($("<td></td>").text(this.bgroup))
                             .append($("<td></td>").text(this.bstep))
                             .append($("<td></td>").text(this.bindent))     
+                            .append($("<td></td>").append($("<input></input>").attr("id",this.bid).attr("type","button").attr("class","del-button").attr("value","삭제")  ))     
                     );
                     });
                 },

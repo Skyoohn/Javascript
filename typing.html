@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <Script>
+    $(document).ready(function(){
+        $("#btnTotal").click(function(){
+            var total = 0;
+
+            $("input:checkbox:checked").each(function(index,item){
+                total = total + Number($(item).val());
+                })
+                $("#totalPrice").text(total)
+        })
+    })
+    </Script>
+</head>
+<body>
+    <div>
+        바나나(1000원) <input type="checkbox" name="fruit" class="fruit" value="1000"><br>
+    사과(500원) <input type="checkbox" name="fruit" class="fruit" value="500"><br>
+    배(1500원) <input type="checkbox" name="fruit" class="fruit" value="1500"><br>
+    <button id="btnTotal">총합구하기</button><br>
+    선택한 총가격:<span id="totalPrice"></span>
+</div>
+</body>
+</html>
