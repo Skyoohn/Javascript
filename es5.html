@@ -93,13 +93,53 @@
 
 //3. 스프레드 연산자 = 원본 훼손 안시키기 위해서
 
-var food = ["닭갈비", "닭꼬치", "닭강정"]
-var drink = ["소주", "맥주"]
-var ezFavorite = [...food, ...drink]
+// var food = ["닭갈비", "닭꼬치", "닭강정"]
+// var drink = ["소주", "맥주"]
+// var ezFavorite = [...food, ...drink]
 
-console.log(ezFovorite.join(', ')) // 닭갈비, 닭꼬치, 닭강정, 소주, 맥주
+// console.log(ezFovorite.join(', ')) // 닭갈비, 닭꼬치, 닭강정, 소주, 맥주
 
-//3.
+// function directions(...args){
+//     var [start, ...remaining] = args;
+//     var [finish, ...stops] = remaining.reverse();
+    
+//     console.log(`${args.length} 도시를 운행합니다.`);
+//     console.log(`${start}에서 출발합니다.`);
+//     console.log(`목적지는 ${finish}입니다.`);
+//     console.log(`중간에 ${stops.length}군데 들립니다.`);
+//     }
+
+//     directions("서울", "수원", "천안", "대전", "대구", "부산");
+
+    //////////////////
+    //클래스
+    class Vacation{
+
+        constructor(destination, length){
+            this.destination = destination;
+            this.length = length;
+        }
+        print(){
+        console.log(`${this.destination}은(는) ${this.length}일 걸립니다.`);
+        }
+    }
+
+    const trip = new Vacation("칠레 산티아고",7)
+    console.log(trip.destination)
+
+    trip.print()
+    // document.write(trip.print())
+
+
+    function User(name) {
+    this.name = name;
+    this.isAdmin = false;
+  }
+
+let user = new User("보라");
+
+alert(user.name); // 보라
+alert(user.isAdmin); // false
 
 </script>
 <body>
